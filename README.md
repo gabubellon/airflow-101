@@ -21,3 +21,5 @@ docker-compose up airflow-init
 ```bash
 docker-compose up
 ```
+
+Crie uma conexão chamada `pokemon_conn` do tipo HTTP com valor de __HOST__ `https://pokeapi.co/api/v2/pokemon`

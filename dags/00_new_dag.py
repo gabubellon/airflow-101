@@ -29,7 +29,7 @@ hello_task = HelloOperator(
     dag=dag,
 )
 
-pokemon = PokeAPI_JSON(
+pokemon_task = PokeAPI_JSON(
     task_id="pokemon_task",
     pokemon="pikachu",
     file_path='/opt/airflow/dags/',
@@ -37,3 +37,5 @@ pokemon = PokeAPI_JSON(
     http_conn_id = 'pokemon_conn',
     dag=dag,
 )
+
+hello_task >> pokemon_task
